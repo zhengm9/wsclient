@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ax21658="http://common.dto.SpringFestivalPolicySave.antFinancial.webServiceCenter.sinosoft.com/xsd" xmlns:ax21657="http://dto.SpringFestivalPolicySave.antFinancial.webServiceCenter.sinosoft.com/xsd" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://service.SpringFestivalPolicySave.antFinancial.webServiceCenter.sinosoft.com" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://service.SpringFestivalPolicySave.antFinancial.webServiceCenter.sinosoft.com">
+    <wsdl:documentation>SpringFestivalPolicySaveService</wsdl:documentation>
+    <wsdl:types>
+        <xs:schema xmlns:ax21659="http://common.dto.SpringFestivalPolicySave.antFinancial.webServiceCenter.sinosoft.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://dto.SpringFestivalPolicySave.antFinancial.webServiceCenter.sinosoft.com/xsd">
+            <xs:import namespace="http://common.dto.SpringFestivalPolicySave.antFinancial.webServiceCenter.sinosoft.com/xsd"/>
+            <xs:complexType name="ProposalSaveRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="applicantEhm" nillable="true" type="ax21659:ApplicantEhm"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="benefitEhm" nillable="true" type="ax21659:BenefitEhm"/>
+                    <xs:element minOccurs="0" name="flightEhm" nillable="true" type="ax21659:FlightEhm"/>
+                    <xs:element minOccurs="0" name="insuredEhm" nillable="true" type="ax21659:InsuredEhm"/>
+                    <xs:element minOccurs="0" name="itemKindAddrEhm" nillable="true" type="ax21659:ItemKindAddrEhm"/>
+                    <xs:element minOccurs="0" name="mainEhm" nillable="true" type="ax21659:MainEhm"/>
+                    <xs:element minOccurs="0" name="operteLogEhm" nillable="true" type="ax21659:OperteLogEhm"/>
+                    <xs:element minOccurs="0" name="requestType" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="salerInfoEhm" nillable="true" type="ax21659:SalerInfoEhm"/>
+                    <xs:element minOccurs="0" name="specialInfoEhm" nillable="true" type="ax21659:SpecialInfoEhm"/>
+                    <xs:element minOccurs="0" name="systemCode" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ProposalSaveResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="comID" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="fromID" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="othSerialNo" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="policyNo" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="policyURL" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="proposalNo" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="requestType" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="sendTime" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="serialNo" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="uuid" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://common.dto.SpringFestivalPolicySave.antFinancial.webServiceCenter.sinosoft.com/xsd">
+            <xs:complexType name="ApplicantEhm">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="addressName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="age" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="appliCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="appliName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="birthday" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="email" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="identifyNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="identifyType" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="induredIdentity" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="insuredNature" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="linkerName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="postAddress" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="postCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="sex" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="BenefitEhm">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="benefitAmount" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="benefitFlag" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="benefitName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="benefitRate" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="identifyNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="identifyType" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="insuredNature" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="relation" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="FlightEhm">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="flightDate" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="flightNo" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="flightTer" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="rFlightDate" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="rFlightNo" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="rFlightTer" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="InsuredEhm">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="addressName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="age" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="appOccupationFlag" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="birthday" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="driveNo" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="email" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="identifyNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="identifyType" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="insuredCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="insuredName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="insuredNature" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="linkerName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="occupationCode1" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="occupationCode2" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="occupationCode3" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="postAddress" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="postCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="relation" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="serialNo" type="xs:int"/>
+                    <xs:element minOccurs="0" name="sex" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="valid" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ItemKindAddrEhm">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="address" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="addressNo" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="appNum" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="city" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="district" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="postCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="province" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="MainEhm">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="accountDate" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="agentCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="alipayBuyerAccount" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="alipayBuyerId" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="applyNum" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="arbitBoardCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="arbitBoardName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="argueSolution" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="asyn" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="businessID" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="businessNature" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="channelCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="checkPayNo" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="cityCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="comCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="comID" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="endDate" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="fromID" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="handler1Code" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="insPeriod" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="lifeOperatorCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="lifeOperatorName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="othFee" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="othOrderCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="othSerialNo" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="payMoney" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="payTime" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="policyNo" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="productCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="proposalNo" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="returnUrl" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="sendTime" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="serialNo" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="strOptionsCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="structure" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="totalAmount" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="totalPremium" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="uuid" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="OperteLogEhm">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="branch" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="branchName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="cxSaler" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="cxSalerBranch" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="cxSalerBranchName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="cxSalerName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="drawerId" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="drawerName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="operator" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="operatorBranch" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="operatorBranchName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="operatorBusinessArea" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="operatorName" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="SalerInfoEhm">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="saler" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="salerBranch" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="salerBranchName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="salerName" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="SpecialInfoEhm">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="businessType" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="companyType" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="dogImmuneNo" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="dogLicenseNo" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="dogStyle" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="insuredArea" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="specialInfoNo" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema xmlns:ax21660="http://dto.SpringFestivalPolicySave.antFinancial.webServiceCenter.sinosoft.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://service.SpringFestivalPolicySave.antFinancial.webServiceCenter.sinosoft.com">
+            <xs:import namespace="http://dto.SpringFestivalPolicySave.antFinancial.webServiceCenter.sinosoft.com/xsd"/>
+            <xs:element name="service">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="param0" nillable="true" type="ax21660:ProposalSaveRequest"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="serviceResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21660:ProposalSaveResponse"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="serviceRequest">
+        <wsdl:part name="parameters" element="ns:service"/>
+    </wsdl:message>
+    <wsdl:message name="serviceResponse">
+        <wsdl:part name="parameters" element="ns:serviceResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="SpringFestivalPolicySaveServicePortType">
+        <wsdl:operation name="service">
+            <wsdl:input message="ns:serviceRequest" wsaw:Action="urn:service"/>
+            <wsdl:output message="ns:serviceResponse" wsaw:Action="urn:serviceResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="SpringFestivalPolicySaveServiceSoap11Binding" type="ns:SpringFestivalPolicySaveServicePortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="service">
+            <soap:operation soapAction="urn:service" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="SpringFestivalPolicySaveServiceSoap12Binding" type="ns:SpringFestivalPolicySaveServicePortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="service">
+            <soap12:operation soapAction="urn:service" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="SpringFestivalPolicySaveServiceHttpBinding" type="ns:SpringFestivalPolicySaveServicePortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="service">
+            <http:operation location="SpringFestivalPolicySaveService/service"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="service"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="service"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="SpringFestivalPolicySaveService">
+        <wsdl:port name="SpringFestivalPolicySaveServiceHttpSoap11Endpoint" binding="ns:SpringFestivalPolicySaveServiceSoap11Binding">
+            <soap:address location="http://172.2.0.39:7001//webServiceCenter/services/SpringFestivalPolicySaveService.SpringFestivalPolicySaveServiceHttpSoap11Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="SpringFestivalPolicySaveServiceHttpSoap12Endpoint" binding="ns:SpringFestivalPolicySaveServiceSoap12Binding">
+            <soap12:address location="http://172.2.0.39:7001//webServiceCenter/services/SpringFestivalPolicySaveService.SpringFestivalPolicySaveServiceHttpSoap12Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="SpringFestivalPolicySaveServiceHttpEndpoint" binding="ns:SpringFestivalPolicySaveServiceHttpBinding">
+            <http:address location="http://172.2.0.39:7001//webServiceCenter/services/SpringFestivalPolicySaveService.SpringFestivalPolicySaveServiceHttpEndpoint/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
