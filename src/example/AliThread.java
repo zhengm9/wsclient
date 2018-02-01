@@ -1,11 +1,6 @@
 package example;
 
 import com.*;
-import download.EPolicyDownLoadRequest;
-import download.EPolicyDownLoadResponse;
-import download.GSTCPolicyDownLoadServiceLocator;
-import download.GSTCPolicyDownLoadServiceSoap11BindingStub;
-import org.codehaus.jackson.map.DeserializationConfig;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.junit.Test;
@@ -40,7 +35,7 @@ public class AliThread implements Runnable {
         }
         System.out.println("classloader:" + HelloWorldClient.class.getClassLoader().getResource("json.txt"));
         ObjectMapper objectMapper = new ObjectMapper();
-        objectMapper.configure(DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+//        objectMapper.configure(DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         ProposalSaveRequest proposalSaveRequest = null;
         try {
             proposalSaveRequest = objectMapper.readValue(HelloWorldClient.class.getClassLoader().getResource("json.txt"), ProposalSaveRequest.class);

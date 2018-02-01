@@ -1,0 +1,64 @@
+{
+    "requestType": "01", 
+    "mainEhm": {
+        "dataSource": "W09", 
+        "proposalNo": "80301201733W900089330", 
+        "policyNo": "80301201733W900089330", 
+        "comCode": "33999700", 
+        "cityCode": "3330000", 
+        "productCode": "99030119", 
+        "endDate": "2018-09-21 23:59:59", 
+        "startDate": "2017-09-22 00:00:00", 
+        "totalPremium": "3.99", 
+        "sendTime": "2018-01-31 17:30:36", 
+        "argueSolution": "1", 
+        "handler1Code": "33042419850801002X", 
+        "operatorCode": "330105198704273120", 
+        "fromID": "taobao", 
+        "othOrderCode": "082018013026330", 
+        "makeCom": "33999701", 
+        "totalAmount": "200.00", 
+        "handlerCode": "330105198704273120"
+    }, 
+    "applicantEhm": {
+        "identifyType": "01", 
+        "identifyNumber": "370724199407160019", 
+        "appliName": "刘春志", 
+        "insuredNature": "3"
+    }, 
+    "systemCode": "DSB", 
+    "insuredEhmArray": [
+        {
+            "identifyType": "01", 
+            "identifyNumber": "370724199407160019", 
+            "insuredName": "刘春志", 
+            "applyNum": "1", 
+            "relation": "M", 
+            "insuredNature": "3", 
+            "benefitEhmArray": [
+                {
+                    "benefitFlag": "1"
+                }
+            ], 
+            "itemKindAddrEhmArray": [
+                {
+                    "address": "", 
+                    "city": "110102", 
+                    "postCode": "100000", 
+                    "province": "110000", 
+                    "district": "500238", 
+                    "addressNo": "1"
+                }
+            ], 
+            "itemKindEhmArray": [
+                {
+                    "serialNo": "1", 
+                    "amount": "200.00", 
+                    "premium": "3.99", 
+                    "kindCode": "", 
+                    "addressNo": ""
+                }
+            ]
+        }
+    ]
+}
